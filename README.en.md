@@ -1,4 +1,4 @@
-# Pwn2Win CTF 2019
+# Pwn2Win CTF 2020
 
 About our NIZK (Non-Interactive Zero-Knowledge) Platform: [arXiv:1708.05844](https://arxiv.org/pdf/1708.05844.pdf).
 
@@ -12,8 +12,8 @@ Next year we plan to have a web-based client. For this edition, please choose on
 
 Clone this repository:
 ```bash
-git clone https://github.com/pwn2winctf/2019.git
-cd 2019
+git clone https://github.com/pwn2winctf/2020.git
+cd 2020
 ```
 
 Then **either** generate a new SSH key:
@@ -38,8 +38,8 @@ CTF=./dctf
 
 Create the container:
 ```bash
-wget https://static.pwn2win.party/pwn2win2019.tar.gz
-lxc image import pwn2win2019.tar.gz --alias=pwn2win
+wget https://static.pwn2win.party/pwn2win2020.tar.gz
+lxc image import pwn2win2020.tar.gz --alias=pwn2win
 lxc launch pwn2win pwn2win
 lxc exec pwn2win -- git pull   # make sure the repository is up to date
 ```
@@ -68,8 +68,8 @@ Make sure you already have an SSH key in your box which is [linked to your GitHu
 
 Clone this repository:
 ```bash
-git clone git@github.com:pwn2winctf/2019.git
-cd 2019
+git clone git@github.com:pwn2winctf/2020.git
+cd 2020
 ```
 
 And install the dependencies, *e.g.* for Debian or Ubuntu:
@@ -95,12 +95,12 @@ $CTF init
 
 If you are **the leader** of the team, answer `y` when you are asked whether you want to register a new team. Share the generated `team-secrets.json` file with the members of the team.
 
-If you are one of the **other members of the team**, place the `team-secrets.json` file shared by your team leader in your `2019` directory.
+If you are one of the **other members of the team**, place the `team-secrets.json` file shared by your team leader in your `2020` directory.
 
 
 ## Challenges
 
-Challenges are available at https://pwn2.win/2019.
+Challenges are available at https://pwn2.win/2020.
 
 If you prefer to browse them locally, you may also run:
 ```bash
@@ -124,7 +124,7 @@ You may omit `--chall challenge-id` from the command, however it will be *very* 
 
 ## Scoreboard
 
-You can see the scoreboard at the game URL (https://pwn2.win/2019) or running the command:
+You can see the scoreboard at the game URL (https://pwn2.win/2020) or running the command:
 ```bash
 $CTF score --names --pull
 ```
