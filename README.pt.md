@@ -1,4 +1,4 @@
-# Pwn2Win CTF 2019
+# Pwn2Win CTF 2020
 
 Sobre a nossa plataforma NIZK (Non-Interactive Zero-Knowledge): [arXiv:1708.05844](https://arxiv.org/pdf/1708.05844.pdf).
 
@@ -12,8 +12,8 @@ Ano que vem, pretendemos ter um cliente baseado em web. Para esta edição, por 
 
 Clone este repositório:
 ```bash
-git clone https://github.com/pwn2winctf/2019.git
-cd 2019
+git clone https://github.com/pwn2winctf/2020.git
+cd 2020
 ```
 
 Depois, gere uma nova chave SSH:
@@ -38,8 +38,8 @@ CTF=./dctf
 
 Crie o contêiner:
 ```bash
-wget https://static.pwn2win.party/pwn2win2019.tar.gz
-lxc image import pwn2win2019.tar.gz --alias=pwn2win
+wget https://static.pwn2win.party/pwn2win2020.tar.gz
+lxc image import pwn2win2020.tar.gz --alias=pwn2win
 lxc launch pwn2win pwn2win
 lxc exec pwn2win -- git pull   # assegura que o repositório está atualizado
 ```
@@ -68,8 +68,8 @@ Assegure-se que você já tenha uma chave SSH na sua máquina que esteja [vincul
 
 Clone este repositório:
 ```bash
-git clone git@github.com:pwn2winctf/2019.git
-cd 2019
+git clone git@github.com:pwn2winctf/2020.git
+cd 2020
 ```
 
 E instale as dependências, *e.g.* no Debian ou Ubuntu:
@@ -95,12 +95,12 @@ $CTF init
 
 Se você for o **líder** do time, responda `y` quando o cliente perguntar se você deseja cadastrar um novo time. Compartilhe o arquivo `team-secrets.json` que será gerado com os demais membros do time.
 
-Se você for um dos **outros membros do time**, coloque o arquivo `team-secrets.json` compartilhado pelo seu líder dentro do seu diretório `2019`.
+Se você for um dos **outros membros do time**, coloque o arquivo `team-secrets.json` compartilhado pelo seu líder dentro do seu diretório `2020`.
 
 
 ## Challenges
 
-Os desafios ficam em [https://pwn2.win/2019](https://pwn2.win/2019).
+Os desafios ficam em [https://pwn2.win/2020](https://pwn2.win/2020).
 
 Se você preferir, pode consultar localmente executando:
 ```bash
@@ -125,7 +125,7 @@ Você pode omitir `--challenge chall-id` do comando, mas vai demorar mais para s
 
 ## Placar
 
-Você pode ver o placar na URL do game (https://pwn2.win/2019) ou por meio do comando:
+Você pode ver o placar na URL do game (https://pwn2.win/2020) ou por meio do comando:
 ```bash
 $CTF score --names --pull
 ```
