@@ -1,7 +1,7 @@
 {
-	"ctf_name": "Pwn2Win CTF 2020",
+	"ctf_name": "Pwn2Win 2020",
 	"repository_host": "GitHub",
-	"submissions_project": "ctf-br/ranking_submissions",
+	"submissions_project": "pwn2winctf/2020submissions",
 
 	"scrypt_ops_limit": 33554432,
 	"scrypt_mem_limit": 402653184,
@@ -16,6 +16,6 @@
 	"github_api_endpoint": "https://api.github.com/",
 	"github_ssh_url": "git@github.com:%s.git",
 
-	"gitlab_api_endpoint": "https://gitlab.com/api/v3/",
+	"gitlab_api_endpoint": "https://gitlab.com/api/v4/",
 	"gitlab_ssh_url": "git@gitlab.com:%s.git"
 }
