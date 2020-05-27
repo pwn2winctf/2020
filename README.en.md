@@ -100,7 +100,7 @@ If you are one of the **other members of the team**, place the `team-secrets.jso
 
 ## Challenges
 
-Challenges are available at https://pwn2.win/2020.
+Challenges are available at https://pwn2.win/.
 
 If you prefer to browse them locally, you may also run:
 ```bash
@@ -124,7 +124,7 @@ You may omit `--chall challenge-id` from the command, however it will be *very* 
 
 ## Scoreboard
 
-You can see the scoreboard at the game URL (https://pwn2.win/2020) or running the command:
+You can see the scoreboard at the game URL (https://pwn2.win) or running the command:
 ```bash
 $CTF score --names --pull
 ```
