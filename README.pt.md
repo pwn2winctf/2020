@@ -100,7 +100,7 @@ Se você for um dos **outros membros do time**, coloque o arquivo `team-secrets.
 
 ## Challenges
 
-Os desafios ficam em [https://pwn2.win/2020](https://pwn2.win/2020).
+Os desafios ficam em [https://pwn2.win/](https://pwn2.win/).
 
 Se você preferir, pode consultar localmente executando:
 ```bash
@@ -125,7 +125,7 @@ Você pode omitir `--challenge chall-id` do comando, mas vai demorar mais para s
 
 ## Placar
 
-Você pode ver o placar na URL do game (https://pwn2.win/2020) ou por meio do comando:
+Você pode ver o placar na URL do game (https://pwn2.win/) ou por meio do comando:
 ```bash
 $CTF score --names --pull
 ```
