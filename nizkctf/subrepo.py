@@ -83,14 +83,19 @@ class SubRepo(object):
         if 'cwd' not in kwargs:
             kwargs['cwd'] = cls.get_path()
 
-        p = subprocess.Popen(['git'] + args, **kwargs)
+        p = subprocess.run(['git'] + args, cwd=kwargs['cwd'], capture_output=True)
+
+        print(p.args)
+        if p.stdout.decode():
+            print(p.stdout.decode())
 
         r = None
         if 'stdout' in kwargs:
-            r = p.stdout.read()
+            r = p.stdout
 
-        returncode = p.wait()
+        returncode = p.returncode
         if returncode not in returncodes:
+            print(p.stderr.decode())
             raise GitError(returncode)
 
         return r
