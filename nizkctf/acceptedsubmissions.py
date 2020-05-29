@@ -9,7 +9,9 @@ from .subrepo import SubRepo
 from .serializable import SerializableDict
 from .scoring import compute_points
 
+from .firebase import saveToFirebase
 
+ACCEPTED_SUBMISSIONS_RTDB = '/accepted-submissions'
 ACCEPTED_SUBMISSIONS_FILE = 'accepted-submissions.json'
 
 
@@ -86,3 +88,4 @@ class AcceptedSubmissions(SerializableDict):
         self.recompute_score(chall)
         self.rank()
         self.save()
+        saveToFirebase(ACCEPTED_SUBMISSIONS_RTDB, self['standings'])
