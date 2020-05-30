@@ -24,24 +24,37 @@ def handle(request):
         # Message not of our interest (e.g. merge request closed)
         return abort(400)
 
+    temp_repo = tempfile.mkdtemp()
+    temp_ssh  = tempfile.mkdtemp()
+
     try:
-        return run(merge_info)
+        return run(merge_info, temp_repo, temp_ssh)
     except Exception as e:
         print(e)
+
+        os.system('rm -rf {}'.format(temp_ssh))
+        os.system('rm -rf {}'.format(temp_repo))
+
         print(traceback.format_exc())
         # Send tracking number to the user
         return send_cloudwatch_info(merge_info, e, request)
 
 
-def run(merge_info):
-    SubRepo.set_clone_into(tempfile.mkdtemp())
+def run(merge_info, temp_repo, temp_ssh):
+    print('started pull request #{}'.format(merge_info['mr_id']));
+
+    SubRepo.set_clone_into(temp_repo)
 
     # Prepare git and ssh for usage inside the container
-    setup_environment()
+    setup_environment(temp_ssh)
 
     # Merge proposal if changes are valid
     consider_proposal(merge_info)
 
+    os.system('rm -rf {}'.format(temp_ssh))
+    os.system('rm -rf {}'.format(temp_repo))
+
+    print('finished #{}'.format(merge_info['mr_id']))
     return 'Great!'
 
 
@@ -62,9 +75,8 @@ def send_cloudwatch_info(merge_info, exception, request):
     return comment
 
 
-def setup_environment():
+def setup_environment(ssh_dir):
     root = os.path.dirname(os.path.realpath(__file__))
-    ssh_dir = tempfile.mkdtemp()
 
     ssh_identity = os.path.join(ssh_dir, 'identity')
     with os.fdopen(os.open(ssh_identity, os.O_WRONLY | os.O_CREAT, 0o600), 'w') as f:
