@@ -7,8 +7,8 @@ Our service is still in beta, so please report any problems you find so our deve
 
 Author: abrasax
 
-[Link](https://static.pwn2win.party/watchers_0e77bc6ca371a1ccf21332fd249ca7947cd7af0615176cb40c8b7c5363273845.tar.gz)
+[Source Link](https://static.pwn2win.party/watchers_0e77bc6ca371a1ccf21332fd249ca7947cd7af0615176cb40c8b7c5363273845.tar.gz)
 
-[Mirror](https://storage.cloud.google.com/pwn2win-files/watchers_0e77bc6ca371a1ccf21332fd249ca7947cd7af0615176cb40c8b7c5363273845.tar.gz)
+[Source Mirror](https://storage.cloud.google.com/pwn2win-files/watchers_0e77bc6ca371a1ccf21332fd249ca7947cd7af0615176cb40c8b7c5363273845.tar.gz)
 
 [http://watchers.pwn2.win](http://watchers.pwn2.win)
